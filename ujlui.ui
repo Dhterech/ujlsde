@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ujlui</class>
+ <widget class="QMainWindow" name="ujlui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UJLSDE</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="infoTab">
+       <attribute name="title">
+        <string>Info</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QTextEdit" name="infoDeb">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="allTab">
+       <attribute name="title">
+        <string>All Subtitles</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Tab with every loaded subtitle</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="aListWidget">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Position</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Text</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="cutsceneTab">
+       <attribute name="title">
+        <string>Cutscene List</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="cListWidget">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>(Debug) ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Cutscene ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Time Start</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Time End</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Language</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Text</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gameplayTab">
+       <attribute name="title">
+        <string>Gameplay List</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="gListWidget">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>(Debug) ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Gameplay ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Language</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Owner</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Time</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Text</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="repTab">
+       <attribute name="title">
+        <string>Char. Replace</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTableWidget" name="rListWidget">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>250</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Original Character</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Replacement</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttonsLayout">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="addRepButton">
+            <property name="text">
+             <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeRepButton">
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionImportP"/>
+    <addaction name="actionExportP"/>
+    <addaction name="separator"/>
+    <addaction name="actionImportR"/>
+    <addaction name="actionExportR"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionFind"/>
+    <addaction name="actionHideBlank"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionLink"/>
+    <addaction name="actionPreview"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="setAll"/>
+   <addaction name="setEn"/>
+   <addaction name="setJp"/>
+   <addaction name="setDe"/>
+   <addaction name="setFr"/>
+   <addaction name="setIt"/>
+   <addaction name="setSp"/>
+   <addaction name="actionHideLink"/>
+   <addaction name="actionCheckRight"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/osOpenOLM</normaloff>
+     <normalon>../../../Downloads/64x64/Open.png</normalon>:/menuIcons/osOpenOLM</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/osSaveOLM</normaloff>
+     <normalon>../../../Downloads/64x64/Save.png</normalon>:/menuIcons/osSaveOLM</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="setEn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/language/icLangEn</normaloff>:/tableIcons/language/icLangEn</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets view to English</string>
+   </property>
+  </action>
+  <action name="setJp">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/language/icLangJp</normaloff>:/tableIcons/language/icLangJp</iconset>
+   </property>
+   <property name="text">
+    <string>Japanese</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets view to Japanese</string>
+   </property>
+  </action>
+  <action name="setDe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/language/icLangGr</normaloff>:/tableIcons/language/icLangGr</iconset>
+   </property>
+   <property name="text">
+    <string>Deutsch</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets view to German</string>
+   </property>
+  </action>
+  <action name="setFr">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/language/icLangFr</normaloff>:/tableIcons/language/icLangFr</iconset>
+   </property>
+   <property name="text">
+    <string>French</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets view to French</string>
+   </property>
+  </action>
+  <action name="setIt">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/language/icLangIt</normaloff>:/tableIcons/language/icLangIt</iconset>
+   </property>
+   <property name="text">
+    <string>Italian</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets view to Italian</string>
+   </property>
+  </action>
+  <action name="setSp">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/language/icLangEs</normaloff>:/tableIcons/language/icLangEs</iconset>
+   </property>
+   <property name="text">
+    <string>Spanish</string>
+   </property>
+   <property name="toolTip">
+    <string>Sets view to Spanish</string>
+   </property>
+  </action>
+  <action name="setAll">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="edit-select-all" resource="resources.qrc">
+     <normaloff>:/menuIcons/flViewAll</normaloff>:/menuIcons/flViewAll</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle view all languages</string>
+   </property>
+   <property name="toolTip">
+    <string>View all languages</string>
+   </property>
+  </action>
+  <action name="actiondebUpdTables">
+   <property name="text">
+    <string>(Debug) Refresh Subtitles List</string>
+   </property>
+   <property name="toolTip">
+    <string>Update screen lists</string>
+   </property>
+  </action>
+  <action name="actionLink">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/fnLink</normaloff>:/menuIcons/fnLink</iconset>
+   </property>
+   <property name="text">
+    <string>Link subtitle</string>
+   </property>
+  </action>
+  <action name="actionPreview">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/fpPreview</normaloff>:/menuIcons/fpPreview</iconset>
+   </property>
+   <property name="text">
+    <string>Preview</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/fpAbout</normaloff>:/menuIcons/fpAbout</iconset>
+   </property>
+   <property name="text">
+    <string>About UJLSDE</string>
+   </property>
+   <property name="toolTip">
+    <string>About UJLSDE</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionHideLink">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/flViewLink</normaloff>:/menuIcons/flViewLink</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle Linked View</string>
+   </property>
+   <property name="toolTip">
+    <string>View linked subtitles</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/menuIcons/fnSearch</normaloff>:/menuIcons/fnSearch</iconset>
+   </property>
+   <property name="text">
+    <string>Find</string>
+   </property>
+   <property name="toolTip">
+    <string>Find a subtitle</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionImportP">
+   <property name="text">
+    <string>Import Project</string>
+   </property>
+  </action>
+  <action name="actionExportP">
+   <property name="text">
+    <string>Export Project</string>
+   </property>
+  </action>
+  <action name="actionImportR">
+   <property name="text">
+    <string>Import Char. Replace</string>
+   </property>
+  </action>
+  <action name="actionExportR">
+   <property name="text">
+    <string>Export Char. Replace</string>
+   </property>
+  </action>
+  <action name="actionCheckRight">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/tableIcons/icParappa</normaloff>:/tableIcons/icParappa</iconset>
+   </property>
+   <property name="text">
+    <string>Check Right</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionHideBlank">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide blank subtitles</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

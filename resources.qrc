@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/tableIcons">
+        <file alias="icParappa">resources/tableIcons/parappa.png</file>
+        <file alias="icTeacher">resources/tableIcons/teacher.png</file>
+        <file alias="icBoxxy">resources/tableIcons/boxxy.jpg</file>
+    </qresource>
+    <qresource prefix="/tableIcons/language">
+        <file alias="icLangEn">resources/tableIcons/language/en.png</file>
+        <file alias="icLangEs">resources/tableIcons/language/es.png</file>
+        <file alias="icLangFr">resources/tableIcons/language/fr.png</file>
+        <file alias="icLangGr">resources/tableIcons/language/gr.png</file>
+        <file alias="icLangIt">resources/tableIcons/language/it.png</file>
+        <file alias="icLangJp">resources/tableIcons/language/jp.png</file>
+    </qresource>
+    <qresource prefix="/menuIcons">
+        <file alias="flViewAll">resources/menuIcons/flViewAll.png</file>
+        <file alias="flViewLink">resources/menuIcons/flViewLink.png</file>
+        <file alias="fnLink">resources/menuIcons/fnLink.png</file>
+        <file alias="fnSearch">resources/menuIcons/fnSearch.png</file>
+        <file alias="fpAbout">resources/menuIcons/fpAbout.png</file>
+        <file alias="fpPreview">resources/menuIcons/fpPreview.png</file>
+        <file alias="osOpenOLM">resources/menuIcons/osOpenOLM.png</file>
+        <file alias="osSaveOLM">resources/menuIcons/osSaveOLM.png</file>
+    </qresource>
+    <qresource prefix="/previewRes">
+        <file alias="pvSubLatinFont">resources/previewRes/sub-latin.otf</file>
+        <file alias="pvSubBackground">resources/previewRes/subtitle-test.jpeg</file>
+    </qresource>
+</RCC>
